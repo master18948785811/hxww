@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "华夏网为", "华夏网为\华夏网为.csproj", "{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLAM_GLBT_1_dll", "..\PLAM_GLBT_1_dll\PLAM_GLBT_1_dll.csproj", "{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileJson", "MobileJson\MobileJson.csproj", "{1A27E83F-6568-4C77-8E94-25B09EB63D20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Debug|x86.Build.0 = Debug|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Release|x86.ActiveCfg = Release|Any CPU
+		{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}.Release|x86.Build.0 = Release|Any CPU
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Debug|x86.ActiveCfg = Debug|x86
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Debug|x86.Build.0 = Debug|x86
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Release|x86.ActiveCfg = Release|x86
+		{2E3909CA-55EE-45E5-84F1-F40E44A34EAC}.Release|x86.Build.0 = Release|x86
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A27E83F-6568-4C77-8E94-25B09EB63D20}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5E54B5E-4663-4CBE-A05C-40CB961E0E8F}
+	EndGlobalSection
+EndGlobal

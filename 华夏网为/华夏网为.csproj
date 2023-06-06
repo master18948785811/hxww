@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47E4E9CE-2734-402F-B377-BF9F4A4DDC88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>华夏网为</RootNamespace>
+    <AssemblyName>华夏网为</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.2\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.112.2\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.112.2\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WSQ_NET_WRAPPER, Version=3.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WSQ_NET_WRAPPER.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appcode\Class2.cs" />
+    <Compile Include="Appcode\dayinzhiwen.cs" />
+    <Compile Include="Appcode\sdyuantuFPT5.cs" />
+    <Compile Include="Appcode\SD_WebSvcCaller.cs" />
+    <Compile Include="Appcode\StreamUtil.cs" />
+    <Compile Include="Appcode\ZipHelper.cs" />
+    <Compile Include="Appcode\zips.cs" />
+    <Compile Include="DNA\DNA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DNA\DNA.Designer.cs">
+      <DependentUpon>DNA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpuser.cs" />
+    <Compile Include="hongmu\hongmu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hongmu\hongmu.Designer.cs">
+      <DependentUpon>hongmu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jinbenxinxi\CVRSDK.cs" />
+    <Compile Include="jinbenxinxi\jinbenxinxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jinbenxinxi\jinbenxinxi.Designer.cs">
+      <DependentUpon>jinbenxinxi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jinbenxinxi\Redata.cs" />
+    <Compile Include="HXWW_FTP\ftpcountect.cs" />
+    <Compile Include="HXWW_FTP\ftpcreat.cs" />
+    <Compile Include="query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="query.Designer.cs">
+      <DependentUpon>query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shengwen\shenwen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shengwen\shenwen.Designer.cs">
+      <DependentUpon>shenwen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shengwen\swzc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shengwen\swzc.Designer.cs">
+      <DependentUpon>swzc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shoujicaiji\shoujicaiji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shoujicaiji\shoujicaiji.Designer.cs">
+      <DependentUpon>shoujicaiji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xinxizhonglan\Redata.cs" />
+    <Compile Include="xinxizhonglan\xinxizonglan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xinxizhonglan\xinxizonglan.Designer.cs">
+      <DependentUpon>xinxizonglan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quanjubianliang.cs" />
+    <Compile Include="sanmianzhao\sanmianozhao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sanmianzhao\sanmianozhao.Designer.cs">
+      <DependentUpon>sanmianozhao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sanmianzhao\ShowCut1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sanmianzhao\ShowCut1.designer.cs">
+      <DependentUpon>ShowCut1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sanmianzhao\ShowImage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sanmianzhao\ShowImage1.designer.cs">
+      <DependentUpon>ShowImage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teshutizheng\teshutizheng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teshutizheng\teshutizheng.Designer.cs">
+      <DependentUpon>teshutizheng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wuzheng\wuzheng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wuzheng\wuzheng.Designer.cs">
+      <DependentUpon>wuzheng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yinhangka\yinhangka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yinhangka\yinhangka.Designer.cs">
+      <DependentUpon>yinhangka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonghuguangli\denglu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonghuguangli\denglu.Designer.cs">
+      <DependentUpon>denglu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonghuguangli\Redata.cs" />
+    <Compile Include="yonghuguangli\shebeizhuce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonghuguangli\shebeizhuce.Designer.cs">
+      <DependentUpon>shebeizhuce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonghuguangli\zuceyonghu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonghuguangli\zuceyonghu.Designer.cs">
+      <DependentUpon>zuceyonghu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhizhangwen\zhizhangwen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhizhangwen\zhizhangwen.Designer.cs">
+      <DependentUpon>zhizhangwen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zuji\zuji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zuji\zuji.Designer.cs">
+      <DependentUpon>zuji.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DNA\DNA.resx">
+      <DependentUpon>DNA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hongmu\hongmu.resx">
+      <DependentUpon>hongmu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jinbenxinxi\jinbenxinxi.resx">
+      <DependentUpon>jinbenxinxi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="query.resx">
+      <DependentUpon>query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sanmianzhao\sanmianozhao.resx">
+      <DependentUpon>sanmianozhao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sanmianzhao\ShowCut1.resx">
+      <DependentUpon>ShowCut1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sanmianzhao\ShowImage1.resx">
+      <DependentUpon>ShowImage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shengwen\shenwen.resx">
+      <DependentUpon>shenwen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shengwen\swzc.resx">
+      <DependentUpon>swzc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shoujicaiji\shoujicaiji.resx">
+      <DependentUpon>shoujicaiji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teshutizheng\teshutizheng.resx">
+      <DependentUpon>teshutizheng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wuzheng\wuzheng.resx">
+      <DependentUpon>wuzheng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xinxizhonglan\xinxizonglan.resx">
+      <DependentUpon>xinxizonglan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yinhangka\yinhangka.resx">
+      <DependentUpon>yinhangka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonghuguangli\denglu.resx">
+      <DependentUpon>denglu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonghuguangli\shebeizhuce.resx">
+      <DependentUpon>shebeizhuce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonghuguangli\zuceyonghu.resx">
+      <DependentUpon>zuceyonghu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhizhangwen\zhizhangwen.resx">
+      <DependentUpon>zhizhangwen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zuji\zuji.resx">
+      <DependentUpon>zuji.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="bin\Debug\hxww.db" />
+    <None Include="bin\Debug\secret.lsn" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\config\confing.xml" />
+    <Content Include="bin\Debug\config\gaopaiyi.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\config\camname.xml" />
+    <Content Include="bin\Debug\config\COM.xml" />
+    <Content Include="bin\Debug\ftp.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\images\biji.png" />
+    <Content Include="bin\Debug\images\biji_01.png" />
+    <Content Include="bin\Debug\images\chognxincaiji.png" />
+    <Content Include="bin\Debug\images\dbj.jpg" />
+    <Content Include="bin\Debug\images\DNA.png" />
+    <Content Include="bin\Debug\images\DNA_01.png" />
+    <Content Include="bin\Debug\images\dz.bmp" />
+    <Content Include="bin\Debug\images\hongmo.png" />
+    <Content Include="bin\Debug\images\hongmo_01.png" />
+    <Content Include="bin\Debug\images\jibenxinxi.png" />
+    <Content Include="bin\Debug\images\jibenxinxi_01.png" />
+    <Content Include="bin\Debug\images\jiluchaxun.png" />
+    <Content Include="bin\Debug\images\niaojian.png" />
+    <Content Include="bin\Debug\images\niaojian_01.png" />
+    <Content Include="bin\Debug\images\renxiang.png" />
+    <Content Include="bin\Debug\images\renxiang_01.png" />
+    <Content Include="bin\Debug\images\sfzzp.png" />
+    <Content Include="bin\Debug\images\shengwen.png" />
+    <Content Include="bin\Debug\images\shengwen_01.png" />
+    <Content Include="bin\Debug\images\shouji .png" />
+    <Content Include="bin\Debug\images\shouji_01.png" />
+    <Content Include="bin\Debug\images\timao.png" />
+    <Content Include="bin\Debug\images\timao_01.png" />
+    <Content Include="bin\Debug\images\tou.jpg" />
+    <Content Include="bin\Debug\images\tuichu.png" />
+    <Content Include="bin\Debug\images\wuzheng.png" />
+    <Content Include="bin\Debug\images\wuzheng_01.png" />
+    <Content Include="bin\Debug\images\xinxi.png" />
+    <Content Include="bin\Debug\images\xinxi_01.png" />
+    <Content Include="bin\Debug\images\yinhangka.png" />
+    <Content Include="bin\Debug\images\yinhangka_01.png" />
+    <Content Include="bin\Debug\images\zhiwen.png" />
+    <Content Include="bin\Debug\images\zhiwen_01.png" />
+    <Content Include="bin\Debug\images\zuji.png" />
+    <Content Include="bin\Debug\images\zuji_01.png" />
+    <Content Include="bin\Debug\webserviceip.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\zwftp.xml" />
+    <Content Include="bin\Debug\华夏网为.exe" />
+    <Content Include="bin\Debug\华夏网为.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\PortraitData\" />
+    <Folder Include="bin\Debug\zhiwenka\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCaptureLib">
+      <Guid>{DA239D05-CC1E-42A7-B76F-6C9D80B76495}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CaptureLib">
+      <Guid>{DA239D05-CC1E-42A7-B76F-6C9D80B76495}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" />
+</Project>
